@@ -15,7 +15,7 @@ class solution{
     public:
         TreeNode *searchBinaryTree(TreeNode* root,int val){
             if(!root || root-> val == val) return root;
-            if(root -> val > val) return searchBinaryTree(root -> left);
-            else return searchBinaryTree(root -> right);
+            if(root -> val > val) return searchBinaryTree(root -> left,val);
+            else return searchBinaryTree(root -> right,val);
         }
 }
